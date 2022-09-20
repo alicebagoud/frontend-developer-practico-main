@@ -22,13 +22,13 @@
         body {
             margin: 0;
             font-family: 'Quicksand', sans-serif;
-            
         }
        .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, 240px); 
         /* se llena automaticamente de la cantidad que quepa de columnas de 240px cada una */
         gap: 26px;
+        place-content: center;
        }
        .product-card {
         width: 240px;
@@ -44,6 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 12px;
        }
        .product-info figure {
         margin: 0;
@@ -51,6 +52,20 @@
        .product-info figure img{
         width: 35px;
         height: 35px;
+       }
+       .product-info div p:nth-child(1) { 
+        /* el primer parrafo ($120) que este dentro de div dentro de product-info tendra las clases siguientes:  */
+        font-weight: bold;
+        font-size: var(--md);
+        margin-top: 0;
+        margin-bottom: 4px;
+       }
+       .product-info div p:nth-child(2) { 
+        /* el segundo parrafo (Bike) que este dentro de div dentro de product-info tendra las clases siguientes:  */
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+        margin-top: 0;
+        margin-bottom: 0;
        }
        @media (max-width: 640px) {
             .cards-container {
